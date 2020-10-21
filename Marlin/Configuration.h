@@ -1355,8 +1355,8 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-#define AUTO_BED_LEVELING_BILINEAR // sebs
-                                   //#define AUTO_BED_LEVELING_UBL
+#define AUTO_BED_LEVELING_BILINEAR // sebs                         \
+                                   //#define AUTO_BED_LEVELING_UBL \
                                    //#define MESH_BED_LEVELING
 
 /**
