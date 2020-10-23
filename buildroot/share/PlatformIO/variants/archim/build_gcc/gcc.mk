@@ -36,7 +36,7 @@ SEP=\\
 # ---------------------------------------------------------------------------------------
 # C Flags
 
-CFLAGS += -Wall -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int
+CFLAGS += -Wall -Wchar-subscripts -Wno-comment -Wformat=2 -Wimplicit-int
 CFLAGS += -Werror-implicit-function-declaration -Wmain -Wparentheses
 CFLAGS += -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused
 CFLAGS += -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef
@@ -59,7 +59,7 @@ CFLAGS += -Dprintf=iprintf
 # ---------------------------------------------------------------------------------------
 # CPP Flags
 
-CPPFLAGS += -Wall -Wchar-subscripts -Wcomment -Wformat=2
+CPPFLAGS += -Wall -Wchar-subscripts -Wno-comment -Wformat=2
 CPPFLAGS += -Wmain -Wparentheses -Wcast-align -Wunreachable-code
 CPPFLAGS += -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused
 CPPFLAGS += -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef
