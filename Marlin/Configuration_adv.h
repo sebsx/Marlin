@@ -2009,7 +2009,7 @@
 // The number of linear moves that can be in the planner at once.
 // The value of BLOCK_BUFFER_SIZE must be a power of 2 (e.g. 8, 16, 32)
 #if BOTH(SDSUPPORT, DIRECT_STEPPING)
-#define BLOCK_BUFFER_SIZE 8
+#define BLOCK_BUFFER_SIZE 16 // sebs
 #elif ENABLED(SDSUPPORT)
 #define BLOCK_BUFFER_SIZE 16
 #else
@@ -2020,7 +2020,7 @@
 
 // The ASCII buffer for serial input
 #define MAX_CMD_SIZE 96
-#define BUFSIZE 4
+#define BUFSIZE 16 // sebs
 
 // Transmission to Host Buffer Size
 // To save 386 bytes of PROGMEM (and TX_BUFFER_SIZE+3 bytes of RAM) set to 0.
@@ -2029,7 +2029,7 @@
 // For debug-echo: 128 bytes for the optimal speed.
 // Other output doesn't need to be that speedy.
 // :[0, 2, 4, 8, 16, 32, 64, 128, 256]
-#define TX_BUFFER_SIZE 0
+#define TX_BUFFER_SIZE 32 // sebs
 
 // Host Receive Buffer Size
 // Without XON/XOFF flow control (see SERIAL_XON_XOFF below) 32 bytes should be enough.
@@ -2070,10 +2070,10 @@
 // Therefore some clients abort after 30 seconds in a timeout.
 // Some other clients start sending commands while receiving a 'wait'.
 // This "wait" is only sent when the buffer is empty. 1 second is a good value here.
-//#define NO_TIMEOUTS 1000 // Milliseconds
+#define NO_TIMEOUTS 1000 // Milliseconds
 
 // Some clients will have this feature soon. This could make the NO_TIMEOUTS unnecessary.
-//#define ADVANCED_OK
+#define ADVANCED_OK // sebs
 
 // Printrun may have trouble receiving long strings all at once.
 // This option inserts short delays between lines of serial output.
@@ -2112,7 +2112,7 @@
 #define FWRETRACT_AUTORETRACT // Override slicer retractions
 #if ENABLED(FWRETRACT_AUTORETRACT)
 #define MIN_AUTORETRACT 0.1  // (mm) Don't convert E moves under this length
-#define MAX_AUTORETRACT 10.0 // (mm) Don't convert E moves over this length
+#define MAX_AUTORETRACT 1.6 // (mm) Don't convert E moves over this length
 #endif
 #define RETRACT_LENGTH 3                // (mm) Default retract length (positive value)
 #define RETRACT_LENGTH_SWAP 13          // (mm) Default swap retract length (positive value)
